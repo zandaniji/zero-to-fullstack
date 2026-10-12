@@ -1,0 +1,13 @@
+# Dependencies and build output (npm install / npm run build recreate them)
+node_modules/
+dist/
+
+# Secrets and local databases
+.env
+*.db
+
+# Editor / tool settings
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db

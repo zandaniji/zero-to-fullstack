@@ -1,0 +1,13 @@
+{
+  "name": "notes-api",
+  "version": "1.0.0",
+  "description": "Module 11 project: an in-memory REST API for notes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

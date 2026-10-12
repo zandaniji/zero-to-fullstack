@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code Path</title>
+<link rel="stylesheet" href="css/app.css">
+<script>try { var t = localStorage.getItem('learnpath.theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to lesson</a>
+
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open course menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
+  <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span> Code Path</a>
+  <div class="topbar-right">
+    <div class="overall" id="overall"></div>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">&#9680;</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar" aria-label="Course contents"></aside>
+  <div class="scrim" id="scrim" hidden></div>
+  <main id="main" tabindex="-1"></main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- App -->
+<script src="js/highlight.js"></script>
+<script src="js/progress.js"></script>
+<script src="content/course.js"></script>
+
+<!-- Lesson content: one file per module -->
+<script src="content/m01-html-css.js"></script>
+<script src="content/m02-javascript.js"></script>
+<script src="content/m03-layout.js"></script>
+<script src="content/m04-arrays-functions-objects.js"></script>
+<script src="content/m05-dom-events.js"></script>
+<script src="content/m06-semantic-a11y.js"></script>
+<script src="content/m07-async.js"></script>
+<script src="content/m08-classes.js"></script>
+<script src="content/c1-expense-tracker.js"></script>
+<script src="content/m09-react-intro.js"></script>
+<script src="content/m10-react-deep-dive.js"></script>
+<script src="content/c2-react-app.js"></script>
+<script src="content/m11-node-express.js"></script>
+<script src="content/m12-databases.js"></script>
+<script src="content/m13-backend-essentials.js"></script>
+<script src="content/c3-fullstack.js"></script>
+
+<script src="js/sandbox-runtimes.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+:root {
+  --bg: #f4f5fb;
+  --surface: #ffffff;
+  --text: #1a1c2b;
+  --muted: #5d6279;
+  --accent: #6a4cf0;
+  --accent-soft: #ece7ff;
+  --danger: #c53b3b;
+  --border: #e0e3ee;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+button {
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background: var(--accent);
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+input {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.status {
+  text-align: center;
+  color: var(--muted);
+}
+
+.error {
+  color: var(--danger);
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.navbar nav,
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar .button {
+  background: var(--accent);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.email {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Auth */
+.auth-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-card label {
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.auth-card button {
+  margin-top: 12px;
+}
+
+.switch {
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Tasks */
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filters {
+  display: flex;
+  gap: 4px;
+  background: var(--surface);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.filters button {
+  background: none;
+  color: var(--muted);
+  padding: 6px 12px;
+}
+
+.filters button.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.task-form #new-task {
+  flex: 1;
+  min-width: 180px;
+}
+
+.form-error {
+  width: 100%;
+  margin: 0;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.task input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+}
+
+.task label {
+  flex: 1;
+}
+
+.task.done label {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.due {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.due.overdue {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.task .delete {
+  background: none;
+  color: var(--danger);
+  padding: 4px 8px;
+}

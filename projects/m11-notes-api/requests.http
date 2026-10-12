@@ -1,0 +1,45 @@
+### Requests for testing the Notes API.
+### Install the "REST Client" extension in VS Code, then click "Send Request" above any request.
+
+@base = http://localhost:3000
+
+### List all notes
+GET {{base}}/api/notes
+
+### Search notes
+GET {{base}}/api/notes?search=express
+
+### Get one note
+GET {{base}}/api/notes/1
+
+### A note that doesn't exist (expect 404)
+GET {{base}}/api/notes/999
+
+### Create a note (expect 201)
+POST {{base}}/api/notes
+Content-Type: application/json
+
+{
+  "title": "Buy coffee",
+  "body": "Beans, not instant!"
+}
+
+### Invalid note (expect 400)
+POST {{base}}/api/notes
+Content-Type: application/json
+
+{
+  "body": "I forgot the title"
+}
+
+### Update a note
+PUT {{base}}/api/notes/1
+Content-Type: application/json
+
+{
+  "title": "Learn Express (done!)",
+  "body": "Routes, middleware, JSON and errors."
+}
+
+### Delete a note (expect 204)
+DELETE {{base}}/api/notes/2
